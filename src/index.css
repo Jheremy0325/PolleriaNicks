@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 25 8% 96%;
+    --foreground: 20 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 10%;
+
+    --primary: 0 75% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 45 85% 58%;
+    --secondary-foreground: 20 14% 10%;
+
+    --muted: 25 8% 92%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 20 14% 8%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 8% 88%;
+    --input: 25 8% 88%;
+    --ring: 0 75% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens for Pollería El Brasero */
+    --fire-red: 0 75% 50%;
+    --fire-red-light: 0 75% 60%;
+    --fire-red-dark: 0 75% 40%;
+    --golden: 45 85% 58%;
+    --golden-light: 45 85% 68%;
+    --golden-dark: 45 85% 48%;
+    --charcoal: 20 14% 8%;
+    --warm-cream: 25 8% 96%;
+    
+    /* Gradients */
+    --gradient-fire: linear-gradient(135deg, hsl(var(--fire-red)), hsl(var(--golden)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--warm-cream)), hsl(var(--golden-light) / 0.1));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--fire-red-dark)));
+    
+    /* Shadows */
+    --shadow-fire: 0 10px 30px -10px hsl(var(--fire-red) / 0.3);
+    --shadow-golden: 0 8px 25px -8px hsl(var(--golden) / 0.4);
+    --shadow-warm: 0 4px 20px -4px hsl(var(--charcoal) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fire: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 14% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 20 14% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 20 14% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 75% 55%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 45 75% 50%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 20 14% 15%;
+    --muted-foreground: 25 8% 65%;
+
+    --accent: 45 85% 58%;
+    --accent-foreground: 20 14% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 14% 20%;
+    --input: 20 14% 20%;
+    --ring: 0 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .fire-gradient {
+    background: var(--gradient-fire);
+  }
+  
+  .warm-gradient {
+    background: var(--gradient-warm);
+  }
+  
+  .dark-gradient {
+    background: var(--gradient-dark);
+  }
+  
+  .fire-shadow {
+    box-shadow: var(--shadow-fire);
+  }
+  
+  .golden-shadow {
+    box-shadow: var(--shadow-golden);
+  }
+  
+  .warm-shadow {
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .transition-fire {
+    transition: var(--transition-fire);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--fire-red) / 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Unique layout utilities */
+  .card-fixed-height {
+    height: 420px;
+  }
+
+  .card-content-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-image-fixed {
+    height: 200px;
+    flex-shrink: 0;
+  }
+
+  .card-body-flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-description-flex {
+    flex: 1;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-border {
+    position: relative;
+  }
+
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, hsl(var(--fire-red)), hsl(var(--golden)), hsl(var(--fire-red)));
+    border-radius: inherit;
+    z-index: -1;
+    background-size: 200% 200%;
+    animation: glowing-border 3s linear infinite;
+  }
+
+  .hexagon-clip {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+  }
+
+  .perspective-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .perspective-card:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glowing-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
