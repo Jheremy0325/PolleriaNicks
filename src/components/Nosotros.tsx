@@ -36,7 +36,7 @@ const Nosotros = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            En Pollería El Brasero, no solo servimos comida, compartimos tradición, pasión y el auténtico sabor del Perú
+            En Pollería NIKS CHIKEN, no solo servimos comida, compartimos tradición, pasión y el auténtico sabor del Perú
           </p>
         </div>
 

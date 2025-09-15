@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo y Descripción */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-[#ff4d4f] via-[#ffd166] to-[#f7e1b5] bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] mb-4">
-              Pollería El Brasero
+              Pollería NIKS CHICKEN
             </h3>
             <p className="text-warm-cream/80 mb-6 leading-relaxed">
               El auténtico sabor del pollo a la brasa peruano. Tradición, calidad y sabor en cada bocado desde 2008.
@@ -83,7 +83,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-medium text-white">Email:</p>
-                <p>info@polleriabrasero.com</p>
+                <p>info@polleria.com</p>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-warm-cream/60 text-sm">
-                © {currentYear} Pollería El Brasero. Todos los derechos reservados.
+                © {currentYear} Pollería NIKS CHIKEN. Todos los derechos reservados.
               </p>
               <p className="text-warm-cream/60 text-sm">
                 Hecho con ❤️ para brindar el mejor sabor peruano.

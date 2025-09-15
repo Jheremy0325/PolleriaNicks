@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fire-red via-golden to-warm-cream">
-              El Brasero
+              NIKS CHIKEN
             </h1>
           </div>
 

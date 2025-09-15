@@ -226,7 +226,7 @@ const Contacto = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Ubicación Pollería El Brasero"
+                    title="Ubicación Pollería NIKS CHIKEN"
                     className="group-hover:scale-105 transition-transform duration-700 z-10"
                   />
                 </div>
